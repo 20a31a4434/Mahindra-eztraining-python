@@ -1,0 +1,98 @@
+CRT DAY 1 AFTERNOON CLASS:-
+=================================================================================================================
+
+I.PROGRAMS:-
+  --------
+
+1.#take 3 interger numbers 3 float numbers 2 strings and 1 complex number as inputs and print same on screen
+  #note use formatted output
+
+
+   code:-
+
+  n1=int(input("FIRST INTEGER:"))
+  print(n1)
+  n2=int(input("SECOND INTEGER:"))
+  print(n2)
+  n3=int(input("THIRD INTEGER:"))
+  print(n3)
+
+  n4=float(input("FIRST FLOAT:"))
+  print(n4)
+  n5=float(input("SECOND FLOAT:"))
+  print(n5)
+  n6=float(input("THIRD FLOAT:"))
+  print(n6)
+
+  n7=str(input("FIRST STRING:"))
+  print(n7)
+  n8=str(input("SECOND STRING:"))
+  print(n8)
+
+  n9=complex(input("COMPLEX NUMBER:"))
+  print(n9)
+    ----------------------------------------------------------------------
+2.#perimeter of a rectangle
+    l,b=int(input("enter the length   l:")),int(input("enter the breadth b:"))
+    perimeter=2*(l+b)
+    print("perimeter",perimeter)
+    ----------------------------------------------------------------------
+  3.#area of a rectangle
+     l,b=int(input("enter the length l:")),int(input("enter the breadth b:"))
+     area=l*b
+     print("area",area)
+     ---------------------------------------------------------------------
+   4.#swapping of two numbers using temp
+     num1=11
+     num2=22
+     print("Before swapping")
+     print(num1)
+     print(num2)
+     temp=num1
+     num1=num2
+     num2=temp
+     print("After swapping")
+     print("the value of num1 after                   swpping=",num1)
+     print("the value of num2 after swapping=",num2)
+     ---------------------------------------------------------------------
+    5.#swapping of numbers without temp
+     m=1
+     n=2
+     print("Before swapping")
+     print(m,n)
+     m=m+n
+     n=m-n
+     m=m-n
+     print("After swapping")
+     print(m,n)
+
+
+===================================================================================================================
+II.OPERATORS:-
+   ---------
+        1.arithematic operator:-(+,-,*,/(returns float value),//(returns int value),%)
+      2.relational operators:-(<,>,<=,>=,!=,==)
+      3.logical operators:-(and,or,not)
+      4.bitwise operator:-(bitwise (AND{&},OR{|},NOT(!),XOR{^}),LEFTSHIFT(<<),RIGHTSHIFT(>>))
+
+===================================================================================================================
+III.MULTIPLE INPUTS IN A SINGLE LIST:-
+        E.G.:-
+            1.#two inputs in a single line
+               n1,n2=int(input("ENTER")),int(input("ENTER"))
+                print(n1)
+                print(n2)
+                s=n1+n2
+                print(s)
+            2.#give inputs separated by commas
+                a,b=input("enter").split(",")
+                print(a)
+                print(type(a))
+                print(b)
+                print(a+b)
+             3.#give inputs separated by space
+                 a,b=input("enter").split(" ")
+                 print(a)
+                 print(b)
+                 print(int(a)+int(b)) #bcs split of works with
+==================================================================================================================
