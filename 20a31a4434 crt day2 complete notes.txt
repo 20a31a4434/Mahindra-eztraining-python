@@ -1,0 +1,248 @@
+CRT CLASS DAY-2 NOTES:-
+---------------------
+
+
+I.O's AND 1's(BITWISE OPERATORS):- Some operations if u do like dz it will be faster like - compressing data
+  ------------------------------   Sending data from one network to other network.
+							0 and 1 (or) ON and OFF (or) True and False
+				 Operations performed (bitwise(AND,OR,NOT,XOR{^}),LEFTSHIFT(<<),RIGHTSHIFT(>>))
+				 example:-
+				 -------
+			          #1.get any numbers both numbers <=15 perform bitwise AND,OR,XOR
+
+			             a,b=int(input("ENTER A NUMBER a= ")),int(input("ENTER A NUMBER b= "))
+				     print(a)
+				     print(b)
+	                               c=print("THE BITWISE AND value is: ")
+				     c=a&b
+				     print(c)
+				     d=print("THE BITWISE OR value is: ")
+				     d=a|b
+				     print(d)
+			   	     e=print("THE BITWISE XOR value is: ")
+			        	     e=a^b
+				     print(e)
+==========================================================================================================================
+II.LISTS:- Used inorder to get multiple inputs using only a single line.
+   -----
+         E.G.:-#1.multiple inputs in a single line [in the code we can also print the code without strip()]
+	----      n=int(input("size:"))
+                  a=list(map(int,input("Numbers:").strip().split()))[:n]
+			  print(a)
+          CONTINUTION OF LIST METHONS IN DAY-3 NOTES
+===========================================================================================================================
+III.INPUT STATEMENT PARAMETER:-
+    -------------------------
+1.seperator:- As the name suggests, sep is used for adding separators into the string provided. Basically, it 
+  ---------   acts as a simple tool to modify the strings by replacing all spaces inside strings with the 
+              specified separator as an input value to the “sep” parameter. If we don’t specify any value to the
+              “sep” parameter the by default it is considered to be a no-space.
+ 
+              syntax:- sep=''
+
+      ex:-print("its","a","good","day",sep='#')   |  out:-its#a#good#day
+          print("all","is","well")                |       all is well
+
+2.ender:-End, as the name suggests, is used for ending pattern of the string supplied during input . Basically, 
+  -----  it acts as a simple tool to modify the strings by formatting the strings in a specified format by the
+         help of specified parameter as an input value to the “end” parameter. If we don’t specify any value to 
+         the “end” parameter the by default it is considered to be a new line character i.e. “\n”.
+
+
+
+              syntax:- end=' '
+
+      ex:-print("its","a","good","day",end=' ')   |  out:-its a good day all is well
+          print("all","is","well")                |
+
+3.using both sep and end to write a program:-
+  -----------------------------------------
+  ex:-print("its","a","good","day",end=' ')       | out:-
+      print("all","is","well",sep='***',end=' ')  |    its a good day all***is***well joy
+      print("joy")                                |
+============================================================================================================================
+IV.CONDITIONAL/CONTROL STATEMENTS:-
+   ------------------------------  
+1.simple if:-The simple Python if statement. You use the if statement to execute a block of code based on a specified 
+  ---------  condition. The if statement checks the condition first. If the condition evaluates to True , it executes
+             the statements in the if-block.
+  
+------------------------------------------------------------------------------------------------------------------
+
+2.if-else:-The if-else statement is used to execute both the true part and the false part of a given condition. 
+  -------  If the condition is true, the if block code is executed and if the condition is false, the else 
+           block code is executed.
+ 
+------------------------------------------------------------------------------------------------------------------
+
+3.else-if or elif:- elif is short for "else if" and is used when the first if statement isn't true, but you want 
+  ------- -- ----   to check for another condition. Meaning, if statements pair up with elif and else statements
+                    to perform a series of checks. A full if/elif/else block is in the code example below.
+
+    example:-1."""temp above 45 degree hottest
+			temp 25-40 degree modriate
+			temp 10-25 degree cold
+			temp 10 degree chill"""
+
+
+			a=int(input("THE TEMPERATURE IN THE CLIMATE IS:- "))
+			print(a)
+			if(a>45):
+			    print("THE CLIMATE IS HOTTEST")
+			elif((a>=25)&(a<=40)):
+			    print("THE CLIMATE IS MODERATE")
+			elif((a>=10)&(a<=25)):
+			    print("THE CLIMATE IS COLD")
+			elif(a<=10):
+			    print("THE CLIMATE IS CHILL")
+			else:
+			    print("THE CLIMATE IS NORMAL")
+		  2.
+-------------------------------------------------------------------------------------------------------------------
+4.else-if ladder:-It is a conditional statement used for selection between multiple set of statements based on 
+  ---- -- ------  multiple test conditions. The various test conditions are provided inside each if statement.
+
+-------------------------------------------------------------------------------------------------------------------
+5.nested if:-You can have if statements inside if statements, this is called nested if statements.
+  ---------
+ 
+-------------------------------------------------------------------------------------------------------------------
+6.loops:-
+  -----
+LOOPS:- 
+   -----   
+(i).WHILE loops:-Python while loop is used to run a block code until a certain condition is met. The syntax of while
+    -----------  loop is: while condition: # body of while loop. Here, A while loop evaluates the condition. If 
+                 the condition evaluates to True , the code inside the while loop is executed.
+
+example for while loop:-
+----------------------
+#using while print first 10 numbers
+
+i=2
+while (i<=20):
+    if(i%2==0):
+        print(i)
+    i=i+1
+------------------------------------------
+#first 10 odd numbers using while
+
+i=2
+while (i<=20):
+    if(i%2!=0):
+        print(i)
+    i=i+1
+-------------------------------------------
+(iii)#guessing of a random number using while loop
+import random
+n=random.randrange(1,50)
+guess=int(input("ENTER ANY NUMBER: "))
+while n!=guess:
+    if guess<n:
+        print("TOO LOW")
+        guess=int(input("ENTER A NUMBER AGAIN: "))
+    elif guess>n:
+        print("TOO HIGH")
+        guess=int(input("ENTER A NUMBER AGAIN: "))
+    else:
+        break
+print("YOU HAVE GUESSED THE NUMBER CORRECT")
+--------------------------------------------
+
+----------------------------------------------------------
+(ii).FOR loops:- A for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, 
+                 a set, or a string). This is less like the for keyword in other programming languages, and 
+                 works more like an iterator method as found in other object-orientated programming languages.
+                 In for loop we have use range to define for loop i.e.range(m,n) where the numbers will be from m to 
+                 (n-1).
+
+examples for for loops:-
+----------------------  
+#first 10 odd numbers using for loop
+
+for i in range(1,11):
+    if(i%2!=0):
+        print(i)
+--------------------------------------------------------
+#first 10 even numbers using for loop
+
+for i in range(1,11):
+    if(i%2==0):
+        print(i)
+--------------------------------------------------------
+============================================================================================================================
+V.PROGRAMS:-
+  --------
+1.#get a number as input and find out whether it is 500 or not
+a=int(input("ENTER A NUMBER n= "))
+if(a==500):
+    print("THE NUMBER IS EQUAL TO 500")
+else:
+    print("THE NUMBER IS NOT EQUAL TO 500")
+  --------------------------------------------------------------------
+2.#Check wheter the given number even+ve or odd+ve or even-ve or odd-ve
+
+a=int(input("THE GIVEN NUMBER BE:- "))
+if((a%2==0)&(a>0)):
+    print("THE GIVEN NUMBER IS EVEN POSITIVE NUMBER")
+elif((a%2!=0)&(a>0)):
+    print("THE GIVEN NUMBER IS ODD POSITIVE NUMBER")
+elif((a%2==0)&(a<0)):
+    print("THE GIVEN NUMBER IS EVEN NEGATIVE NUMBER")
+elif((a%2!=0)&(a<0)):
+    print("THE GIVEN NUMBER IS ODD NEGATIVE NUMBER")
+else:
+    print("THE NUMBER IS ZERO")
+  ----------------------------------------------------------------------
+3.#get 2 numbers as input and find the biggest number of them
+
+a,b=int(input("ENTER THE NUMBER a= ")),int(input("ENTER THE NUMBER b= "))
+print(a)
+print(b)
+if(a>b):
+    print("a IS THE BIGGEST")
+else:
+    print("b IS THE BIGGEST")
+   ----------------------------------------------------------------------
+4.#check whther the number is float or integer
+
+num=-8.98
+if type(num)==int:
+    print("THE NUMBER IS AN INTEGER")
+elif type(num)==float:
+    print("THE NUMBER IS A FLOAT")
+else:
+    print("THE NUMBER HAS A DIFFERNT DATATYPE")
+   ----------------------------------------------------------------------
+5.#get 3 numbers as input print the greatest number
+
+a,b,c=int(input("ENTER THE NUMBER a= ")),int(input("ENTER THE NUMBER b= ")),int(input("ENTER THE NUMBER c= "))
+print(a)
+print(b)
+print(c)
+if((a>b)&(a>c)):
+    print("a IS THE GREATEST")
+elif((b>a)&(b>c)):
+    print("b IS THE GREATEST")
+elif((c>a)&(c>b)):
+    print("c IS THE GREATEST")
+else:
+    print("error")
+   -------------------------------------------------------------------------
+6.#check whether the given number is divisible by 11 or not
+
+a=int(input("ENTER THE NUMBER a= "))
+if(a%11==0):
+    print("THE GIVEN NUMBER IS DIVISIBLE BY 11")
+else:
+    print("THE GIVEN NUMBER IS NOT DIVISIBLE BY 11")
+   -------------------------------------------------------------------------
+7.#check whether the number is divisible by both 2 and 5
+
+a=int(input("ENTER THE NUMBER a= "))
+print(a)
+if((a%2==0)&(a%5==0)):
+    print("THE GIVEN NUMBER IS DIVISIBLE BY BOTH 2 AND 5")
+else:
+    print("THE GIVEN NUMBER IS NOT DIVISIBLE BY BOTH 2 AND 5")
+===============================================================================================================================

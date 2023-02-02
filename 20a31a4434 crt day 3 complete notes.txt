@@ -1,0 +1,306 @@
+CRT DAY-3 NOTES:- 
+===============   
+===========================================================================================
+I.SLICING:- The slice() function returns a slice object. A slice object is used to specify
+  -------   how to slice a sequence. You can specify where to start the slicing, and where 
+            to end. You can also specify the step, which allows you to e.g. slice only 
+            every other item.
+            syntax:-slice(start, end, step)
+ex-1:-
+----
+"""Create a tuple and a slice object. Start the slice object at position 3, and slice to 
+ position 5, and return the result:"""
+
+a = ("a", "b", "c", "d", "e", "f", "g", "h")
+x = slice(3, 5)
+print(a[x])
+-------------------------------------------------------------------------------------------
+ex-2:-
+----
+# Python slice() function example  
+# Calling function  
+str1 = "Javatpoint"  
+slic = slice(0,10,3) # returns slice object  
+slic2 = slice(-1,0,-3) # returns slice object  
+# We can use this slice object to get elements  
+str2 = str1[slic]  
+str3 = str1[slic2] # returns elements in reverse order  
+# Displaying result  
+print(str2)  
+print(str3)
+  
+Output:
+
+Jaot
+toa
+Py
+===========================================================================================
+II.LIST METHODS:-
+   ------------
+Python has a set of built-in methods that you can use on lists.
+________________________________________________________________________________________
+|Method   |Description                                                                 |
+|---------|----------------------------------------------------------------------------|
+|append() |Adds an element at the end of the list                                      |
+|clear()  |Removes all the elements from the list                                      |
+|copy()   |Returns a copy of the list                                                  |
+|count()  |Returns the number of elements with the specified value                     |
+|extend() |Add the elements of a list (or any iterable), to the end of the current list|
+|index()  |Returns the index of the first element with the specified value             |
+|insert() |Adds an element at the specified position                                   |
+|pop()    |Removes the element at the specified position                               |
+|remove() |Removes the item with the specified value                                   |
+|reverse()|Reverses the order of the list                                              |
+|sort()   |Sorts the list                                                              |
+|_________|____________________________________________________________________________|
+
+EXAMPLE:-
+-------  
+1.exmple based on all methods:-
+  ---------------------------
+>>>L=[1,2,3,4,5,6,7,8]
+>>>L
+   [1, 2, 3, 4, 5, 6, 7, 8] #output
+>>>L.append(20)
+>>>L
+   [1, 2, 3, 4, 5, 6, 7, 8, 20]  #output
+>>>len(L)
+   9  #output
+>>>L.count(29)
+   0  #output
+>>>L.count(1)
+   1  #output
+>>>L.extend([15,33,222])
+>>>L
+   [1, 2, 3, 4, 5, 6, 7, 8, 20, 15, 33, 222]  #output
+>>>L.remove(1)
+>>>L
+   [2, 3, 4, 5, 6, 7, 8, 20, 15, 33, 222]   #output
+>>>L.pop(-2)
+   33     #output
+>>>L.pop(9)
+   222   #output
+>>>L.pop(8)
+   15   #output
+>>>L
+   [2, 3, 4, 5, 6, 7, 8, 20] #output
+>>>L.sort()
+>>>L
+   [2, 3, 4, 5, 6, 7, 8, 20]   #output
+>>>L.reverse()
+>>>L
+   [20, 8, 7, 6, 5, 4, 3, 2]   #output
+2.#create a list with 10 elements print the elements one by one
+
+a=range(1,11)
+print(list(map(int, a)))
+
+3.#create a list with 5 float numbers find and display sum and average of the list
+
+b=range(1,6)
+print(list(map(float,b)))
+
+4.#after creating a list with 6 elements from user extract only even numbers and print
+
+size=int(input("SIZE= "))
+c=[]
+for i in range(size):
+    ele=int(input("elements= "))
+    c.append(ele)
+print(c)
+for i in c:
+    if(i%2==0):
+        print(i)
+
+5."""get list of NO.S as INPUT, RETURN THE PRODUCT if the product if the product if less
+    than 750 else return the SUM"""
+
+n=list(map(int,input("ENTER:").split()))
+print(n)
+
+x=1
+y=0
+for i in n:
+    x=x*i
+    y=y+i
+if x<=750:
+    print("PROD",x)
+else:
+    print("SUM",y)
+        
+
+============================================================================================
+III.COMPREHENSION:-*Comprehensions in Python are used to generate new sequences based on 
+    -------------  existing sequences. In Python, we have comprehensions for lists, 
+                   dictionaries, sets and generators. The type of the existing (original)
+                   sequence and new sequence need not be the same.
+                   *Comprehensions in Python provide us with a short and concise way to 
+                   construct new sequences (such as lists, set, dictionary etc.) 
+
+=>LIST COMPREHENSION:- List Comprehensions provide an elegant way to create new lists
+  ------------------
+
+Syntax:-output_list = [output_exp for var in input_list if (var satisfies this
+		          condition)]
+
+
+E.G.:- 
+----
+1.#CREATING OF A LIST WHILE THER EXIST AN EXISTING LIST IN THE PROGRAM
+
+L=["hyd","vizag","chennai","vijayawada"]
+city=[]
+for n in L:
+    if "v" in n:
+        city.append(n)
+print(city)
+
+
+L1=[2**x for x in range(2,10)]
+print(L1)
+L2=[a for a in range(100,201,20)]
+print(L2)
+
+L3=[1,2,3,4,5,6]
+L4=[i for i in L3 if (i<5)]
+print(L4)
+================================================================================================
+
+IV.SET()FUNCTION:-set() method is used to convert any of the iterable to sequence of iterable elements 
+   -------------  with distinct elements, commonly called Set. 
+         Syntax : set{iterable} 
+         Parameters : Any iterable sequence like list, tuple or dictionary. 
+         Returns : An empty set if no element is passed.
+TYPES:- s.add(element)
+        s.update({elements})
+        s.discard(element)
+        s.remove(element)..... gets error if element is not present
+
+EXAMPLE:-
+1.
+>>>s1={1,2,3)
+>>>s2={4,5,6,1,2}
+>>>s1|s2   #union.....s1.union(s2)
+out:{1,2,3,4,5,6}
+>>>s1&s2   #intersect....s1.intersection(s2)
+out:{1,2}
+>>>s1-s2   #difference...s1.difference(s2)
+out:{3}
+>>>s2-s1
+out:{4,,5,6}
+
+2.#inorder to get superset one list must have all its elements in the other list
+>>>S={1,2,3}
+>>>S1={1,2,3,4}
+>>>S1.issuperset(S)
+out:TRUE
+
+3.
+>>>s={1,4,3,7}
+>>>type(s)
+out:<class 'set'>
+>>>ss={1,2,1,1,5,3,2}
+>>>ss
+out:{1,2,3,5}    #set doees not repeat a element and arranges in ascending format
+>>>s.add(55)
+>>>s
+out:{1,4,3,55,7}  #when using add a element the elem will be added into the list randomly
+
+===============================================================================================
+
+V.TUPLE:- Tuples are used to store multiple items in a single variable. Tuple is one of 4 built
+  -----   -in data types in Python used to store collections of data, the other 3 are List, 
+          Set, and Dictionary, all with different qualities and usage. A tuple is a collection 
+          which is ordered and unchangeable.
+
+          tuples are:-
+          ORDERED
+          UNCHANGEABLE
+          CAN'T INCLUDE ITEMS
+          CAN'T FETCH USING [INDEX]
+          Methods --- count and index
+          Index - returns element's index but also shows the same index for the repeated element
+>>>t.index[10]
+out:#will give us the index value of the element 
+
+=======================================================================================================
+VI.DICTIONARY:- Dictionary. Dictionaries are used to store data values in key:value pairs. A 
+   ----------   dictionary is a collection which is ordered*, changeable and do not allow 
+                duplicates. As of Python version 3.7, dictionaries are ordered. In Python 3.6 
+                and earlier, dictionaries are unordered.Dictionaries are optimized to retrieve
+                values when the key is known.
+                Dictionary contains elements with 2 units keys and values
+                Function involved are keys(),values() and get()
+                #where get is used write the elements or string present in the list.
+
+E.G:-
+---
+1.
+>>>d={1:"one",2:"two"}
+>>>d
+out:{1: 'one', 2: 'two'}
+>>>type(d)
+out:<class 'dict'>
+>>>d.keys()
+out:dict_keys([1, 2])
+>>>d.values()
+out:dict_values(['one', 'two'])
+>>>d.items()
+out:dict_items([(1, 'one'), (2, 'two')])
+-----------------------------------------------------------
+
+Dictionary is with keys:- 
+-----------------------   
+E.G:-
+---  
+1.
+>>>d={'syl':'techno','charru':'meizu'}
+>>>type(d)
+out:
+>>>d.keys()
+out:
+>>>d.values()
+out:
+>>>d.items()
+out:
+
+2.Can create dictionaries from iterables like list,tuple,range 
+
+d.fromkeys(iterable,value ).value is optional
+
+I=['hi hello'] 
+
+>>>dict.fromkeys
+
+{hi': None, 'hello': None} 
+
+>>>dict.fromkeys(1,50)
+
+{hi': 50, 'hello: 50}
+{}.fromkeys(1,100) ⚫
+s-dict. fromkeys(1,100)
+>>>s
+{hi: 100, 'hello's: 100}
+---------------------------------------------------------
+3.DICTIONARY MAPPING 
+
+d.Items returns all pairs 
+d.update(['c:89))--add one or more items
+
+d.pop('b)--- fetch and remove item
+
+d.popitem() - fetch and remove recently added item   
+d.setdefault('angel',700) - if the key is not in dic-wil be added or nothing will be done
+
+d=[1:'a',2:'c')
+
+d.setdefault(3,d) 
+Now print d 
+3,d will be added
+
+Note:
+Value is optional 
+d.setdefault(2) is valid
+
+
+
