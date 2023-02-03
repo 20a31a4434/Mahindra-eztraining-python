@@ -1,0 +1,135 @@
+DAY-4 CRT NOTES:-
+===============
+==================================================================================
+
+I.PROGRAMS:-
+  ========   
+#1.PRINTING SQUARES USING RANGE
+
+d={n:n*n for n in range(1,5)}
+print(d)
+
+#2.CALCULATING PRODUCT PRICE FOR 5 UNITS
+
+old={'rice':60,'dhall':120,'oil':150}
+new={product:price*5 for (product,price)in old.
+     items()}
+print(new)
+
+#3.WITH CHECKS
+
+real={'sam':24,'ange':18,'kumar':34}
+new={name:age for (name,age) in real.items()
+     if age>20}
+print(new)
+
+
+"""4.CREATE A LIST WITH 8 CUSTOMER NAMES DISPLAY A DICTIONARY WHICH HAS
+CUSTOMER NAMES ALONG WITH DISCOUNTS FOR THEM FROM A PARTICULAR SHOP"""
+
+import random
+cust=['sung','baam','anos','arthur','rimuru','ainz','gilgamesh','akuto']
+cust_dict={names:random.randint(1,100) for names in cust}
+print(cust_dict)
+
+
+#5.keys and values from two iterables-zip function
+
+L1=['a', 'b', 'c'] L2=[1,2,3]
+
+d-(a:b for (a, b) in zip(L1, L2)}
+
+print (d)
+
+
+
+#6. 2 lists where 1st list has  5 students. 2nd list have total marks.
+   #5 subjects - dictionary
+   #with names and the percentage
+
+stud=["a", "b", "c", "d", "e"]
+marks=[200, 480, 478, 389,321]
+
+stud_dict={name: (marks/500)*100 for (name, marks) in zip(stud, marks)}
+
+print(stud_dict)
+===================================================================================
+
+
+II.STRINGS:-Python strings are "immutable" which means they cannot be changed after
+   =======  they are created (Java strings also use this immutable style). Since 
+            strings can't be changed, we construct *new* strings as we go to 
+            represent computed values.
+            In computer programming, a string is a sequence of characters.
+            We use single quotes(') or double quotes(") to represent a string in- 
+            -Python.
+            Strings are used for storing text/characters. For example, "Hello World"
+            is a string of characters.
+            syntax codes ( #,*,&,@,~,?,(,),%,and ^) enclosed in single quotation 
+            marks ( ' ).             
+Case Changing of Strings:-The below functions are used to change the case of the 
+------------------------  strings.
+
+lower()  : Converts all uppercase characters in a string into lowercase
+upper()  : Converts all lowercase characters in a string into uppercase
+title()  : Convert string to title case
+
+Table of Python String Methods:-
+------------------------------
+___________________________________________________________________________________
+Function_Name 	Description
+-----------------------------------------------------------------------------------
+capitalize()  :  Converts the first character of the string to a capital (uppercase)
+                 letter
+casefold()	   :  Implements caseless string matching
+center()	    :  Pad the string with the specified character.
+count()	    :  Returns the number of occurrences of a substring in the string.
+encode()	    :  Encodes strings with the specified encoded scheme
+endswith()	   :  Returns “True” if a string ends with the given suffix
+expandtabs()  :  Specifies the amount of space to be substituted with the “\t” 
+                 symbol in the string
+find()	    :  Returns the lowest index of the substring if it is found
+format()	    :  Formats the string for printing it to console
+format_map()  :  Formats specified values in a string using a dictionary
+index()	    :  Returns the position of the first occurrence of a substring in a 
+                 string
+isalnum()	    :  Checks whether all the characters in a given string is 
+                 alphanumeric or not
+isalpha()	    :  Returns “True” if all characters in the string are alphabets
+isdecimal()   :  Returns true if all characters in a string are decimal
+isdigit()	    :  Returns “True” if all characters in the string are digits
+isidentifier():  Check whether a string is a valid identifier or not
+islower()	    :  Checks if all characters in the string are lowercase
+isnumeric()   :  Returns “True” if all characters in the string are numeric 
+                 characters
+isprintable() :  Returns “True” if all characters in the string are printable or 
+                 the string is empty
+isspace()     :  Returns “True” if all characters in the string are whitespace 
+                 characters
+istitle()     :  Returns “True” if the string is a title cased string
+isupper()	    :  Checks if all characters in the string are uppercase
+join()	    :  Returns a concatenated String
+ljust()	    :  Left aligns the string according to the width specified
+lower()	    :  Converts all uppercase characters in a string into lowercase
+lstrip()	    :  Returns the string with leading characters removed
+maketrans()   :  Returns a translation table
+partition()   :  Splits the string at the first occurrence of the separator 
+replace()	    :  Replaces all occurrences of a substring with another substring
+rfind()	    :  Returns the highest index of the substring
+rindex()	    :  Returns the highest index of the substring inside the string
+rjust()	    :  Right aligns the string according to the width specified
+rpartition()  :  Split the given string into three parts
+rsplit()	    :  Split the string from the right by the specified separator
+rstrip()	    :  Removes trailing characters
+splitlines()  :  Split the lines at line boundaries
+startswith()  :  Returns “True” if a string starts with the given prefix
+strip()	    :  Returns the string with both leading and trailing characters
+swapcase()    :  Converts all uppercase characters to lowercase and vice versa
+title()	    :  Convert string to title case
+translate()   :  Modify string according to given translation mappings
+upper()	    :  Converts all lowercase characters in a string into uppercase     
+zfill()	    :  Returns a copy of the string with ‘0’ characters padded to the   
+                 left side of the string                                          
+-----------------------------------------------------------------------------------
+
+
