@@ -1,0 +1,343 @@
+20A31A4434:               •
+DAY-5 CRT NOTES:-
+===============
+============================================================================
+I.RANDOM():-
+  --------
+  •The random() method returns a random floating number between 0 and 1.
+  •The Random Function returns a number selected at random within the range 
+   indicated by the low and high values. RAND( low, high ) low. Lowest 
+   possible random value.
+  
+The random module has a set of methods:
+
+Method	     Description
+
+seed()	     Initialize the random number generator
+
+getstate()	Returns the current internal state of the random number 
+               generator
+
+setstate()	Restores the internal state of the random number generator
+
+getrandbits()	Returns a number representing the random bits
+
+randrange()	Returns a random number between the given range
+
+
+randint() 	Returns a random number between the given range
+
+choice()	     Returns a random element from the given sequence
+
+choices()  	Returns a list with a random selection from the given 
+               sequence
+
+shuffle() 	Takes a sequence and returns the sequence in a random order
+
+sample()       Returns a given sample of a sequence
+
+random()	     Returns a random float number between 0 and 1
+
+uniform()      Returns a random float number between two given parameters
+
+triangular()	Returns a random float number between two given parameters,
+               you can also set a mode parameter to specifythe midpoint  
+               between the two other parameters
+
+betavariate()	     Returns a random float number between 0 and 1 based on
+                    the Beta distribution (used in statistics)
+
+expovariate()	     Returns a random float number based on the Exponential 
+                    distribution (used in statistics)
+
+gammavariate()  	Returns a random float number based on the Gamma 
+                    distribution (used in statistics)
+
+gauss()    	     Returns a random float number based on the Gaussian 
+                    distribution (used in probability theories)
+
+lognormvariate()	Returns a random float number based on a log-normal 
+                    distribution (used in probability theories)
+
+normalvariate()	Returns a random float number based on the normal 
+                    distribution (used in probability theories)
+
+vonmisesvariate()	Returns a random float number based on the von Mises 
+                    distribution (used in directional statistics)
+
+paretovariate()	Returns a random float number based on the Pareto 
+                    distribution (used in probability theories)
+
+weibullvariate()	Returns a random float number based on the Weibull 
+                    distribution (used in statistics)
+
+
+
+----------------------------------------------------------------------------
+II.RANDINT[randint()]:-The randint() method returns an integer number 
+  ------------------   selected element from the specified range. 
+  Note: This method is an alias for randrange(start, stop+1).
+  •We call randint a pseudo-‐random number generator (PRNG) since it 
+   generates numbers that appear random but are not truly random
+----------------------------------------------------------------------------
+III.R.CHOICE(r.choice):-The choice() method returns a randomly selected 
+    ------------------  element from the specified sequence. The sequence 
+                        can be a string, a range, a list, a tuple or any 
+                        other kind of sequence.
+  •The in-built choice() function from the random module randomly selects an
+   element from a sequence, such as a list.
+  •SYNTAX:-
+           random.choice(sequence)
+           Parameters: 
+           sequence is a mandatory parameter that can be a list, tuple,or - 
+               -string.
+           
+           Returns:  
+           The choice() returns a random item.
+   •Note:We have to import random to use choice() method.
+
+
+----------------------------------------------------------------------------
+IV.R.UNIFORM(r.uniform):-The uniform() method returns a random floating 
+   --------------------  number between the two specified numbers (both 
+                         included).
+•uniform() function in Python is used to create arrays filled with random 
+ samples which are from a uniform distribution. Uniform distribution is a
+ probability-related distribution. This function returns the samples that 
+ are uniformly distributed over the given intervals of low and high.
+•Syntax:-
+         random.uniform(a, b)
+•Parameter Values:-
+
+Parameter	     Description
+a	          Required. A number specifying the lowest possible outcome
+b	          Required. A number specifying the highest possible outcome
+
+----------------------------------------------------------------------------
+V.FUNCTIONS:-  There are two types of functions they are:-predefined and          
+  ---------    user-defined
+
+  •For code reusability we use function
+  •Let's say we want to use particular cocept multiple times in our program
+   instead of writing the same code many times we can write it once include
+   that inside a function and call the function wherever we need it
+  •A function is a block of code which only runs when it is called.
+  •You can pass data, known as parameters, into a function.
+  •A function can return data as a result.
+
+ Syntax:-  def my_function():
+ ------
+ Types:-
+ -----
+  •Function without arguments and without retrurn values
+  •Function without arguments and with return values
+  • with arguments and with return values
+  • with arguments and without return values
+
+i.pre-defined functions:-Any of a set of subroutines that perform standard
+  ---------------------  mathematical functions included in a programming 
+                         language; either included in a program at 
+                         compilation time, or called when a program is 
+                         executed.It is also called as Built-in functions.
+
+Python has a set of built-in functions.
+
+Function	    Description
+---------    -----------------------------------------------------
+abs()	    Returns the absolute value of a number
+
+all()	    Returns True if all items in an iterable object are true
+
+any()	    Returns True if any item in an iterable object is true
+
+ascii() 	    Returns a readable version of an object. Replaces none-ascii 
+               characters with escape character
+
+bin()	    Returns the binary version of a number
+
+bool()	    Returns the boolean value of the specified object
+
+bytearray()   Returns an array of bytes
+
+bytes()	    Returns a bytes object
+
+callable()    Returns True if the specified object is callable, otherwise
+               False
+
+chr()	         Returns a character from the specified Unicode code.
+
+classmethod() Converts a method into a class method
+
+compile()	    Returns the specified source as an object, ready to be 
+               executed
+
+complex()	    Returns a complex number
+
+
+delattr()	    Deletes the specified attribute (property or method) from the 
+               specified object
+
+dict()	    Returns a dictionary (Array)
+
+dir()	         Returns a list of the specified object's properties and 
+               methods
+
+divmod()	    Returns the quotient and the remainder when argument1 is 
+               divided by argument2
+
+enumerate()   Takes a collection (e.g. a tuple) and returns it as an
+               enumerate object
+
+eval()	    Evaluates and executes an expression
+
+exec()	    Executes the specified code (or object)
+
+filter()	    Use a filter function to exclude items in an iterable object
+
+float()	    Returns a floating point number
+
+format()	    Formats a specified value
+
+frozenset()   Returns a frozenset object
+
+getattr()	    Returns the value of the specified attribute (property or
+               method)
+
+globals()	    Returns the current global symbol table as a dictionary
+
+hasattr()	    Returns True if the specified object has the specified 
+               attribute (property/method)
+
+hash()	    Returns the hash value of a specified object
+
+help()	    Executes the built-in help system
+
+hex()	         Converts a number into a hexadecimal value
+
+id()	         Returns the id of an object
+
+input()	    Allowing user input
+
+int()	         Returns an integer number
+
+isinstance()  Returns True if a specified object is an instance of a 
+               specified object
+
+issubclass()  Returns True if a specified class is a subclass of a specified 
+               object
+
+iter()	    Returns an iterator object
+
+len()	         Returns the length of an object
+
+list()	    Returns a list
+
+locals()	    Returns an updated dictionary of the current local symbol 
+               table
+
+map()	    Returns the specified iterator with the specified function
+               applied to each item
+
+max()	    Returns the largest item in an iterable
+
+memoryview()	Returns a memory view object
+
+min()	     Returns the smallest item in an iterable
+
+next()	     Returns the next item in an iterable
+
+object()	     Returns a new object
+
+oct()	     Converts a number into an octal
+
+open()	     Opens a file and returns a file object
+
+ord()	     Convert an integer representing the Unicode of the 
+                specified character
+
+pow()	     Returns the value of x to the power of y
+ 
+print()	     Prints to the standard output device
+
+property()	Gets, sets, deletes a property
+
+range()	     Returns a sequence of numbers, starting from 0 and 
+               increments by 1 (by default)
+
+repr()	     Returns a readable version of an object
+
+reversed()	Returns a reversed iterator
+
+round()	     Rounds a numbers
+
+set()	     Returns a new set object
+
+setattr() 	Sets an attribute (property/method) of an object
+
+slice()	     Returns a slice object
+
+sorted()     	 Returns a sorted list
+
+staticmethod() Converts a method into a static method
+
+str()	      Returns a string object
+
+sum()	      Sums the items of an iterator
+
+super()	      Returns an object that represents the parent class
+
+tuple()	      Returns a tuple
+
+type()	      Returns the type of an object
+
+vars()	      Returns the __dict__ property of an object
+
+zip()	      Returns an iterator, from two or more iterators
+-------------------------------------------------------------------------
+
+ii.user-defined functions:-User-defined functions are functions that you 
+   ----------------------  use to organize your code in the body of a policy.
+   Once you define a function, you can call it in the same way as the built-
+   -in action and parser functions. Variables that are passed to a function 
+    are passed by reference, rather than by value.
+   •In Python, def keyword is used to declare user defined functions. An 
+    indented block of statements follows the function name and arguments 
+    which contains the body of the function.
+   •Syntax:-  def function_name():
+     ------       statements
+     
+----------------------------------------------------------------------------
+VI.SAMPLE:- sample() is an inbuilt function of random module in Python that 
+   ------   returns a particular length list of items chosen from the 
+   sequence i.e. list, tuple, string or set. Used for random sampling 
+   without replacement. Syntax : random.sample(sequence, k) Parameters: 
+   sequence: Can be a list, tuple, string, or set.
+  •In Python, you can randomly sample elements from a list with choice() , 
+   sample() , and choices() of the random module. These functions can also 
+   be applied to a string and tuple. choice() returns one random element, 
+   and sample() and choices() return a list of multiple random elements.
+ 
+  •Syntax :- random.sample(sequence, k)
+  •Parameters:-
+      sequence: Can be a list, tuple, string, or set.
+      k: An Integer value, it specify the length of a sample.
+  •Returns: k length new list of elements chosen from the sequence.
+
+
+----------------------------------------------------------------------------
+VII.RECURSIVE FUNCTION:-A function which calls itself is called recurssive 
+    ------------------  function.This concept is called "Recursion"
+•Python also accepts function recursion, which means a defined function can 
+ call itself.
+
+•Recursion is a common mathematical and programming concept. It means that 
+ a function calls itself. This has the benefit of meaning that you can loop 
+ through data to reach a result.
+•Syntax:
+
+    def func(): <--
+                  |
+                  | (recursive call)
+                  |
+        func() ----
+----------------------------------------------------------------------------
