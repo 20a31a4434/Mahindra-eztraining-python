@@ -1,0 +1,63 @@
+20A31A4434:-                             •
+==========
+DAY-6 CRT NOTES:-
+===============
+=============================================================================
+
+I.EXCEPTION HANDLING:- In general, when a Python script encounters a situa-
+  ------------------  -tion that it cannot cope with, it raises an exception. 
+  An exception is a Python object that represents an error. When a Python  
+  script raises an exception, it must either handle the exception immedia-
+  -tely otherwise it terminates and quits.
+ •When there is exception the developer does not want interuption or disturb-
+  -ance in the program flow  to control these we are using exception handle-
+  -ing.
+ •The cause of an exception is often external to the program itself. For 
+  example, an incorrect input, a malfunctioning IO device etc. Because the 
+  program abruptly terminates on encountering an exception, it may cause 
+  damage to system resources, such as files. Hence, the exceptions should 
+  be properly handled so that an abrupt termination of the program is 
+  prevented.
+ •Python uses 'try' and 'except' keywords to handle exceptions.Both keywords
+  are followed by indented blocks.
+  
+Syntax:-
+------
+try :
+    #statements in try block
+except :
+    #executed when error in try block
+
+
+ •There are mainly three kinds of distinguishable errors in Python: syntax 
+  errors, exceptions and logical errors.
+============================================================================
+II.OOP's:-(Object Oriented programming):- It is a effiecient concept,used in
+   ------------------------------------   all object oriented language like
+   java and python, for multiple reasons we use OOP's concepts
+   for example:-code reusability,data security,hiding data.
+   
+   Class:- It is a blueprint. E.g.:birds,laptops.
+   Objects:- It is a thing created based on class.
+           NOTE:- one class can have multiple objects.
+   
+   EXAMPLES:-
+   class:-birds
+   object:-parrots,pegions,sparrow etc
+ 
+   class:-laptop
+   object:-lenovo,mac,hp,dell,etc 
+
+•In Python, object-oriented Programming (OOPs) is a programming paradigm 
+ that uses objects and classes in programming. It aims to implement real-
+ world entities like inheritance, polymorphisms, encapsulation, etc. in the 
+ programming. The main concept of OOPs is to bind the data and the functions
+ that work on that together as a single unit so that no other part of the 
+ code can access this data.
+•Main Concepts of Object-Oriented Programming (OOPs) 
+ ->Class
+ ->Objects
+ ->Polymorphism
+ ->Encapsulation
+ ->Inheritance
+ ->Data Abstraction
