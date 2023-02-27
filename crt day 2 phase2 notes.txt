@@ -1,0 +1,124 @@
+CRT PHASE-II DAY-2 NOTES:-
+------------------------
+====================================================================================
+I.PRIVATE and PRIVATE encap FUNCTIONS:-
+  -----------------------------------
+  1.public:-The public member is accessible from inside or outside the class.
+    ------
+
+  2.private:-The private member is accessible only inside class. Define a private 
+    -------   member by prefixing the member name with two underscores.
+   syntax:-__a  (double underscore__variable name)
+====================================================================================
+II.POLYMORPHISM:-Polymorphism in python defines methods in the child class that have 
+   ------------  the same name as the methods in the parent class. In inheritance, 
+                 the child class inherits the methods from the parent class. Also, 
+                 it is possible to modify a method in a child class that it has 
+                 inherited from the parent class 
+  types in polymorphism:- 
+
+          1.overloading:- Method Overloading in Python is a type of Compile-time 
+            -----------   Polymorphism using which we can define two or more metho-
+                          -ds in the same class with the same name but with a 
+                          different parameter list. We cannot perform method 
+                          overloading in the Python programming language as every-
+                          -thing is considered an object in Python.
+            there are two types in method overloading they are:-
+
+            a.operator overloading:- Operator Overloading means giving extended 
+              --------------------   meaning beyond their predefined operational 
+                                     meaning. For example operator + is used to add
+                                     two integers as well as join two strings and 
+                                     merge two lists. It is achievable because '+' 
+                                     operator is overloaded by int class and str 
+                                     class.
+
+            b.method overloading:- Methods in Python can be called with zero, one, 
+              ------------------   or more parameters. This process of calling the 
+                                   same method in different ways is called method 
+                                   overloading.
+
+          2.overridding:- Method overriding is a feature of object-oriented progra-
+            -----------   -mming languages where the subclass or child class can 
+                          provide the program with specific characteristics or a 
+                          specific implementation process of data provided that are
+                          already defined in the parent class or superclass.
+                              (OR)
+                  If a method is defective or cannot be used inside derived class 
+                  it will take it from its base class or parent class.
+=====================================================================================
+                                   DATA STRUCTURES
+                                   ===============
+The basic Python data structures in Python include list, set, tuples, and dictionary. 
+Each of the data structures is unique in its own way. Data structures are “containers”
+that organize and group data according to type. The data structures differ based on 
+mutability and order. (OR) Helps to write efficient programs.
+
+CLASSIFICATION OF DATA STRUCTURES:-
+---------------------------------  
+Data structure has many different uses in our daily life. There are many different data 
+structures that are used to solve different mathematical and logical problems. By using 
+data structure, one can organize and process a very large amount of data in a relatively 
+short period.
+                             
+
+                            DATA STRUCTURES
+                                    |
+    ------------------------------------------------------------------
+    |                                                                |
+  Linear                                                      Non-Linear
+    |                                                             |
+   -------------------                             ----------------------
+   |                 |                             |                    |
+ static           dynamic                         tree                Graph
+  |                 |
+ arrays      --------------------   
+             |       |          |
+          Queue   Stack    Linked List
+
+
+
+
+1.Linear data structure:- Data structure in which data elements are arranged sequentially 
+ ---------------------   or linearly, where each element is attached to its previous and
+                         next adjacent elements, is called a linear data structure. 
+ Examples of linear data structures are array, stack, queue, linked list, etc.
+ there are two types in linear datastructures they are:-
+  •Static data structure:-Static data structure has a fixed memory size. It is easier to 
+   ---------------------  access the elements in a static data structure. 
+   An example of this data structure is an array.
+
+  •Dynamic data structure:-In the dynamic data structure, the size is not fixed. It can be 
+   ----------------------  randomly updated during the runtime which may be considered 
+                           efficient concerning the memory (space) complexity of the code. 
+   Examples of this data structure are queue, stack, etc.
+
+2.Non-linear data structure:-Data structures where data elements are not placed sequenti-
+  -------------------------  -ally or linearly are called non-linear data structures. In 
+                             a non-linear data structure, we can’t traverse all the 
+                             elements in a single run only. 
+  Examples of non-linear data structures are trees and graphs.
+
+===========================================================================================
+III.LINKED LIST:-As the name says list of items which are linked with one another is called 
+    -----------  linked list.
+                 Real time example is train
+Types of linked lists:-  
+--------------------- 
+1.Single linked list:-
+2.double linked list
+3.circular linked list
+
+CREATING LINKED LIST:-
+--------------------
+step-1:-create the node
+step-2:-partition the node with two segments i.e. 'data' and 'none'
+step-3:-add value into the blank node
+step-4:-mark the node as head
+step-5:-creating next node by following the above steps
+step-6:-establish link b/w first and second nodes
+
+DISPLAYING LINKED LIST:-
+----------------------
+Traversel is required from first node till tail node inorder to display exsiting linked 
+list.
