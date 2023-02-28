@@ -1,0 +1,112 @@
+CRT DAY 3 PHASE 2 NOTES:-
+-----------------------
+===========================================================================================
+I.INSERTION AND DELETION IN DATA STRUCTURES USING PYTHON PROGRAM:- Data Structures are a 
+  --------------------------------------------------------------   way of organizing data 
+  so that it can be accessed more efficiently depending upon the situation. Data Structures
+  are fundamentals of any programming language around which a program is built. Python 
+  helps to learn the fundamental of these data structures in a simpler way as compared to 
+  other programming languages.
+  We use the following in data structures:-
+  1.LISTS:-Python Lists are just like the arrays, declared in other languages which is an 
+    -----  ordered collection of data. It is very flexible as the items in a list do not 
+    need to be of the same type.
+    Example: Creating Python List
+    List = [1, 2,  3, "GFG", 2.3]
+    print(List)
+  2.DICTIONARY:-Python dictionary is like hash tables in any other language with the time 
+    ----------  complexity of O(1). It is an unordered collection of data values, used to 
+    store data values like a map, which, unlike other Data Types that hold only a single 
+    value as an element, Dictionary holds the key:value pair. Key-value is provided in the 
+    dictionary to make it more optimized.Indexing of Python Dictionary is done with the 
+    help of keys. These are of any hashable type i.e. an object whose can never change 
+    like strings, numbers, tuples, etc. We can create a dictionary by using curly braces
+    ({}) or dictionary comprehension.
+  3.TUPLES:-Python Tuple is a collection of Python objects much like a list but Tuples are 
+    ------  immutable in nature i.e. the elements in the tuple cannot be added or removed 
+    once created. Just like a List, a Tuple can also contain elements of various types.
+    In Python, tuples are created by placing a sequence of values separated by ‘comma’ 
+    with or without the use of parentheses for grouping of the data sequence.
+    Note: Tuples can also be created with a single element, but it is a bit tricky. Having
+    ----  vone element in the parentheses is not sufficient, there must be a trailing 
+    ‘comma’ to make it a tuple.
+  4.SET:-Python Set is an unordered collection of data that is mutable and does not allow 
+    ---  any duplicate element. Sets are basically used to include membership testing and 
+    eliminating duplicate entries. The data structure used in this is Hashing, a popular 
+    technique to perform insertion, deletion, and traversal in O(1) on average. 
+    If Multiple values are present at the same index position, then the value is appended 
+    to that index position, to form a Linked List. In, CPython Sets are implemented using 
+    a dictionary with dummy variables, where key beings the members set with greater 
+    optimizations to the time complexity.
+  5.LINKED LISTS:- A linked list is a linear data structure, in which the elements are not 
+    ------------   stored at contiguous memory locations.
+    A linked list is represented by a pointer to the first node of the linked list. The 
+    first node is called the head. If the linked list is empty, then the value of the head 
+    is NULL.
+    Each node in a list consists of at least two parts:
+    	•Data
+     	•Pointer to the next node
+==========================================================================================
+II.CREATING OF MODULES:-To create a module just save the code you want in a file with the 
+   -------------------  file extension .py:
+   EXAMPLE:-
+   Save this code in a file named mymodule.py
+   def greeting(name):
+     print("Hello, " + name)
+
+   Steps to create a module:-
+   1.Create the module folder.
+   2.Create the etc/module. xml file.
+   3.Create the registration. php file.
+   4.Run the bin/magento setup.
+   5.Upgrade script to install the new module.
+   6.Check that the module is working
+==========================================================================================
+III.LINKED LISTS:-A linked list is a sequence of data elements, which are connected 
+    ------------  together via links. Each data element contains a connection to another 
+    data element in form of a pointer. Python does not have linked lists in its standard 
+    library. We implement the concept of linked lists using the concept of nodes.
+    •Creation of Linked list:-A linked list is created by using the node class.We create a 
+     Node object and create another class to use this ode object. We pass the appropriate
+     values through the node object to point the to the next data elements. 
+    •Traversing a Linked List:-Singly linked lists can be traversed in only forward 
+     direction starting form the first data element. We simply print the value of the next 
+     data element by assigning the pointer of the next node to the current data element.
+    •Insertion in a Linked List:-Inserting element in the linked list involves reassigning 
+     the pointers from the existing nodes to the newly inserted node. Depending on whether 
+     the new data element is getting inserted at the beginning or at the middle or at the 
+     end of the linked list, we have the below scenarios.
+      ••Inserting at the Beginning:-This involves pointing the next pointer of the new 
+        data node to the current head of the linked list. So the current head of the linked
+        list becomes the second data element and the new node becomes the head of the 
+        linked list.
+      ••Inserting at the End:-This involves pointing the next pointer of the the current 
+        last node of the linked list to the new data node. So the current last node of the
+        linked list becomes the second last data node and the new node becomes the last
+        node of the linked list.
+    •Inserting in between two Data Nodes:-This involves changing the pointer of a specific
+     node to point to the new node. That is possible by passing in both the new node and 
+     the existing node after which the new node will be inserted. So we define an 
+     additional class which will change the next pointer of the new node to the next
+     pointer of middle node. Then assign the new node to next pointer of the middle node.
+    •Removing an Item:-We can remove an existing node using the key for that node. In the
+     below program we locate the previous node of the node which is to be deleted.Then, 
+     point the next pointer of this node to the next node of the node to be deleted.
+===========================================================================================
+IV.SINGLE LINKED LISTS:-A singly linked list is a type of linked list that is unidirectio-
+   -------------------- -nal, that is, it can be traversed in only one direction from head 
+   to the last node (tail). Each element in a linked list is called a node. A single node 
+   contains data and a pointer to the next node which helps in maintaining the structure 
+   of the list.
+   DOUBLE LINKED LIST:-Doubly Linked List contains a link element called first and last.
+   ------------------  Each link carries a data field(s) and two link fields called next 
+   and prev. Each link is linked with its next link using its next link. Each link is 
+   linked with its previous link using its previous link.
+   CIRCULAR LINKED LIST:- In a circular linked list, the head and the rear are adjacent to 
+   --------------------   each other. They are connected to form a circle, and don't have 
+   'NULL' value in the last node.
+    Another 'linked_list' class needs to be created that would have an initialization
+    function, and the head of the node would be initialized to 'None'.
+   
+===========================================================================================
+V.
