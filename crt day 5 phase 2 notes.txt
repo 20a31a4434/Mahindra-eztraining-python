@@ -1,0 +1,157 @@
+CRT DAY-5 PHASE-2 NOTES:-             • 
+-----------------------
+============================================================================================
+I.TREES:-A Tree is a Data structure in which data items are connected using references in a 
+  -----  hierarchical manner. Each Tree consists of a root node from which we can access 
+  each element of the tree. Starting from the root node, each node contains zero or more 
+  nodes connected to it as children. A simple binary tree can be depicted as seen in the 
+  following figure.
+    E.G.:-            50   [ROOT NODE]
+                     /  \
+                   20    45    [INTERNAL NODES]
+                  /|\    /\[EDGE]
+                11 4 11 30 78   [LEAF NODES]
+  
+ PARTS IF TREE DATA STRUCTURES:-A tree consists of a root node, leaf nodes and internal 
+ -----------------------------  nodes. Each node is connected to its chile via a reference,
+ which is called an edge. 
+ (i).Root Node: Root node is the topmost node of a tree. It is always the first node created
+     while creating the tree and we can access each element of the tree starting from the 
+     root node. In the above example, the node containing element 50 is the root node.
+ (ii).Parent Node: The parent of any node is the node which references the current node. 
+      In the above example, 50 is the parent of 20 and 45, 20 is parent of 11, 46 and 15. 
+      Similarly 45 is the parent of 30 and 78.
+ (iii).Child Node: Child nodes of a parent node are the nodes at which the parent node is 
+       pointing using the references. In the example above, 20 and 45 are children of 50.
+       The nodes 11, 46, and 15 are children of 20 and 30 and 78 are children of 45.
+ (iv).Edge: The reference through which a parent node is connected to a child node is called
+      an edge. In the above example, each arrow that connects any two nodes is an edge.
+ (v).Leaf Node: These are those nodes in the tree which have no children. In the above 
+     example, 11, 46, 15, 30, and 78 are leaf nodes.
+ (vi).Internal Nodes: Internal Nodes are the nodes which have at least one child. In the 
+      above example, 50, 20 and 45 are internal nodes.
+============================================================================================
+II.BINARY TREE:-A binary tree is a tree data structure in which each node can have a maximum
+  ------------  of 2 children.  It means that each node in a binary tree can have either one
+  or two or no children. Each node in a binary tree contains data and references to its 
+  children. Both the children are named as left child and the right child according to their
+  position
+============================================================================================
+III.BINARY TREE TRANSVERSAL:-Unlike linear data structures (Array, Linked List, Queues, 
+    -----------------------  Stacks, etc) which have only one logical way to traverse them,
+    trees can be traversed in different ways. The following are the generally used methods 
+    for traversing trees:-
+
+(i).INORDER TRANSVERSAL:-(L D R)
+    -------------------   
+    ALGORITHM:- 1.Traverse the left subtree, i.e., call Inorder(left->subtree)
+                2.Visit the root.
+                3.Traverse the right subtree, i.e., call Inorder(right->subtree)
+
+    Uses of Inorder Traversal:-
+       In the case of binary search trees (BST), Inorder traversal gives nodes in 
+       non-decreasing order. To get nodes of BST in non-increasing order, a variation of 
+       Inorder traversal where Inorder traversal is reversed can be used.
+           E.G.:-     50 
+                     /  \
+                   20    45   
+                  / \     \
+                11  22     78   
+              INORDER TRANSVERSAL will be [11,20,22,50,45,78]      
+
+(ii).PREORDER TRANSVERSAL:-(D L R)
+     --------------------  
+     Algorithm:- 1.Visit the root.
+                 2.Traverse the left subtree, i.e., call Preorder(left->subtree)
+                 3.Traverse the right subtree, i.e., call Preorder(right->subtree)
+ 
+     Uses of Preorder:-Preorder traversal is used to create a copy of the tree. Preorder
+           traversal is also used to get prefix expressions on an expression tree.
+           E.G.:-     50  
+                     /  \
+                   20    45   
+                         /\
+                       30 78 
+        PREORDER TRANSVERSAL is :-[50,20,45,30,78]
+
+(iii).POSTOREDER TRANSVERSAL:-(L R D)
+      ----------------------
+      ALGORTHM:-  1.Traverse the left subtree, i.e., call Postorder(left->subtree)
+                  2.Traverse the right subtree, i.e., call Postorder(right->subtree)
+                  3.Visit the root     
+
+      Uses of Postorder:-Postorder traversal is used to delete the tree. Please see the 
+         question for the deletion of a tree for details. Postorder traversal is also 
+         useful to get the postfix expression of an expression tree.
+         E.G.:-      -50   
+                     /  \
+                   20    45    
+                         /\
+                        30 78  
+            POSTORDER TRANSVERSAL is:- [20,30,78,45,-50]
+===========================================================================================
+IV.PERFECT BINARY TREE:-A perfect binary tree is a type of binary tree in which every 
+   -------------------  internal node has exactly two child nodes and all the leaf nodes 
+   are at the  same level.
+   All the internal nodes have a degree of 2.
+   Recursively, a perfect binary tree can be defined as:
+    •If a single node has no children, it is a perfect binary tree of height h = 0,
+    •If a node has h > 0, it is a perfect binary tree if both of its subtrees are of height 
+     h - 1 and are non-overlapping.
+  PERFECT BINARY TREE THEOREMS:-
+  •A perfect binary tree of height h has 2^(h + 1) – 1 node.
+  •A perfect binary tree with n nodes has height[ log(n + 1) – 1 = Θ(ln(n)) ].
+  •A perfect binary tree of height h has 2^h leaf nodes.
+  •The average depth of a node in a perfect binary tree is [Θ(ln(n))].
+===========================================================================================
+V.COMPLETE BINARY TREE:-A complete binary tree is a binary tree in which all the levels are
+  --------------------  completely filled except possibly the lowest one, which is filled 
+  from the left.
+  A complete binary tree is just like a full binary tree, but with two major differences
+     •All the leaf elements must lean towards the left.
+     •The last leaf element might not have a right sibling i.e. a complete binary tree 
+      doesn't have to be a full binary tree.
+===========================================================================================
+VI.FULL BINARY TREE:-A full Binary tree is a special type of binary tree in which every 
+   ----------------  parent node/internal node has either two or no children.
+   It is also known as a proper binary tree.
+   Full Binary Tree Theorems:-
+   -------------------------
+   Let, i = the number of internal nodes
+       n = be the total number of nodes
+       l = number of leaves
+      λ = number of levels
+   •The number of leaves is i + 1.
+   •The total number of nodes is 2i + 1.
+   •The number of internal nodes is (n – 1) / 2.
+   •The number of leaves is (n + 1) / 2.
+   •The total number of nodes is 2l – 1.
+   •The number of internal nodes is l – 1.
+   •The number of leaves is at most 2λ - 1.
+============================================================================================
+VII.BALANCED BINARY TREE:-In a binary tree, each node contains two children, i.e left child
+    --------------------  and right child. Let us suppose we have a binary tree and we need
+    to check if the tree is balanced or not. A Binary tree is said to be balanced if the 
+    difference of height of left subtree and right subtree is less than or equal to '1'.
+============================================================================================
+VIII.BINARY SEARCH TREE:-A Tree is a non-linear Data Structure. A Binary Search Tree is a 
+     ------------------  data structure that enables us to keep a list of numbers that is 
+     sorted. Each node in a Binary Search Tree Python can have a maximum of 2 children 
+     (i.e left child and right child). A Binary Search Tree Python is used to find any 
+     element present in a Binary Search Tree in just O(n) worst-case time.
+A Binary Search Tree Python is a special type of tree, i.e., a nonlinear data structure with
+special properties like 
+•Each tree node can have a maximum of 2 children nodes, i.e., left node and right node.
+•In each tree node, the value of the left child is less than or equal to its parent node,
+ and the value of the right child will always be greater than or equal to its parent node
+ value.
+•Left_Subtree(node) <= node <= Right_Subtree(node)
+ 
+  This leads to the formation of 2 subtrees for each node, where the value of each node is
+ a left subtree containing keys that are less than or equal to the value of the parent node,
+ and each value contained in the right subtree is greater than or equal to the key value of
+ its node.
+ In Python, in order to implement a Binary Search Tree, we can use object-oriented
+ programming, i.e., we can create a class to represent nodes that will have 3 parameters,
+ i.e., the key, the address of the left node, and the address of the right node.
+============================================================================================
